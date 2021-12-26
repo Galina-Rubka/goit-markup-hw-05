@@ -48,10 +48,12 @@ img {
 .nav-site a {
   color: #212121;
   text-decoration: none;
-
   font-weight: 500;
 }
 
+.stay {
+  color: #2196f3;
+}
 .contact-li a:hover,
 .contact-li a:focus {
   color: var(--them-colour);
@@ -131,7 +133,42 @@ img {
   margin: 0 auto;
   margin-bottom: 30px;
 }
+/* модальное окно 1 */
 
+.backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+
+  background: rgba(0, 0, 0, 0.2);
+}
+.backdrop .is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.icon-close {
+}
+.modal {
+  position: absolute;
+  width: 528px;
+  min-height: 581px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.modal-button {
+  position: absolute;
+}
 .paragraph-name {
   font-weight: bold;
   font-size: 14px;
@@ -336,6 +373,9 @@ img {
   margin-right: auto;
   align-items: center;
 }
+.nav-li {
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 .nav-li:not(:last-child) {
   margin-right: 50px;
@@ -383,6 +423,7 @@ img {
 /* fffff */
 
 .icon-envelope {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   justify-content: center;
   align-items: center;
   margin-right: 10px;
@@ -391,6 +432,7 @@ img {
 }
 
 .icon-smartphone {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   justify-content: center;
   align-items: center;
   margin-right: 10px;
@@ -651,32 +693,49 @@ h6 {
 }
 
 .text-box {
+  position: relative;
   padding: 20px 24px 20px 24px;
   background: #ffffff;
   border: 1px solid #eeeeee;
   box-sizing: border-box;
 }
-.container-picture {
-  /* position: relative; */
-}
+
 .box-transform {
   position: relative;
 }
+
+.link-picture {
+  overflow: hidden;
+}
+.link-picture:hover .text-transform,
+.link-picture:focus .text-transform {
+  transform: translateY(0);
+  opacity: 1;
+}
 .text-transform {
   position: absolute;
+  margin: 0;
+  opacity: 0;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(33, 150, 243, 0.9);
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  background: rgba(33, 150, 243, 0.9);
+  padding: 63px 24px;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-picture {
   cursor: pointer;
   display: block;
   text-decoration: none;
-  position: relative;
 }
+/* с репетой */
 .link-picture:hover,
 .link-picture:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
