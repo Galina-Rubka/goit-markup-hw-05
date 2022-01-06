@@ -171,6 +171,22 @@ img {
 
 .modal-button {
   position: absolute;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid grey;
+  top: 8px;
+  right: 8px;
+  font-size: 1.4em;
+  transition: 0.3s linear color;
+  display: flex;
+  justify-content: center;
+}
+
+.modal-button:hover {
+  color: var(--them-colour);
 }
 .paragraph-name {
   font-weight: bold;
@@ -715,12 +731,12 @@ h6 {
 .link-picture:hover .text-transform,
 .link-picture:focus .text-transform {
   transform: translateY(0);
-  opacity: 1;
 }
+
 .text-transform {
   position: absolute;
   margin: 0 auto;
-  opacity: 0;
+
   top: 0;
   left: 0;
   width: 100%;
